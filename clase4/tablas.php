@@ -1,3 +1,45 @@
+<?php 
+    $Productos = array(
+        0 => array(
+            "nombre" => "hola",
+            "codigo" => 1234,
+            "precio" => 1000,
+            "cantidad" => 3,
+            "medioPago" => "transferencia",
+            "descuento" => "NO",
+            "total" => 2700
+        ),
+        1 => array(
+            "nombre" => "adios",
+            "codigo" => 7852,
+            "precio" => 9000,
+            "cantidad" => 3,
+            "medioPago" => "transferencia",
+            "descuento" => "NO",
+            "total" => 90020
+        ),
+        2 => array(
+            "nombre" => "aña",
+            "codigo" => 389,
+            "precio" => 200,
+            "cantidad" => 2,
+            "medioPago" => "tarjeta",
+            "descuento" => "NO",
+            "total" => 400
+        ),
+        3 => array(
+            "nombre" => "owo",
+            "codigo" => 123,
+            "precio" => 9000,
+            "cantidad" => 2,
+            "medioPago" => "tarjeta",
+            "descuento" => "NO",
+            "total" => 18000
+        )
+    ); 
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
