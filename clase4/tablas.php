@@ -32,7 +32,7 @@
             "codigo" => 2004,
             "precio" => 45000,
             "cantidad" => 2,
-            "medioPago" => "tarjeta",
+            "medioPago" => "efectivo",
             "descuento" => "NO",
             "total" => 0
         ),
@@ -41,7 +41,7 @@
             "codigo" => 2005,
             "precio" => 280000,
             "cantidad" => 1,
-            "medioPago" => "tarjeta",
+            "medioPago" => "efectivo",
             "descuento" => "NO",
             "total" => 0
         ),
@@ -59,7 +59,7 @@
             "codigo" => 2007,
             "precio" => 38000,
             "cantidad" => 23,
-            "medioPago" => "tarjeta",
+            "medioPago" => "efectivo",
             "descuento" => "NO",
             "total" => 0
         ),
@@ -86,7 +86,7 @@
             "codigo" => 2010,
             "precio" => 8000,
             "cantidad" => 5,
-            "medioPago" => "transferencia",
+            "medioPago" => "efectivo",
             "descuento" => "NO",
             "total" => 0
         )
@@ -138,14 +138,17 @@
                     <td>$<?php echo $Productos[$i]["precio"]?></td>
                     <td><?php echo $Productos[$i]["cantidad"]?></td>
                     <td><?php echo $Productos[$i]["medioPago"]?></td>
-                    <?php
-                         if ($Productos[$i]["descuento"] == "efectivo"){
+                    <td class="table-<?php 
+                        
+                        if ($Productos[$i]["descuento"] == "efectivo"){
                             $color = "success"; 
                         }else{
                             $color ="danger";
                         }
-                    ?>
-                    <td class="table-<?php echo $color ?> text-center fw-bold">
+                    
+                        echo $color 
+                    
+                    ?> text-center fw-bold">
                         <?php
                             if ($Productos[$i]["descuento"] == "efectivo"){
                                 echo "SI";
@@ -159,6 +162,10 @@
                         <?php 
                             $total = $Productos[$i]["cantidad"] * $Productos[$i]["precio"];
                             $Productos[$i]["total"] = $total;
+                            $descuento = $total * 0.90;
+                            if ($Productos[$i]["medioPago"] == "efectivo"){
+                                $total = $total - $descuento
+                            }
                             echo $Productos[$i]["total"];
                         ?>
                     </td>
