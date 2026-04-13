@@ -1,0 +1,15 @@
+C:\xampp\htdocs\TP3\clase4\bin\Debug\net9.0\clase4.exe
+C:\xampp\htdocs\TP3\clase4\bin\Debug\net9.0\clase4.deps.json
+C:\xampp\htdocs\TP3\clase4\bin\Debug\net9.0\clase4.runtimeconfig.json
+C:\xampp\htdocs\TP3\clase4\bin\Debug\net9.0\clase4.dll
+C:\xampp\htdocs\TP3\clase4\bin\Debug\net9.0\clase4.pdb
+C:\xampp\htdocs\TP3\clase4\obj\Debug\net9.0\clase4.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\TP3\clase4\obj\Debug\net9.0\clase4.AssemblyInfoInputs.cache
+C:\xampp\htdocs\TP3\clase4\obj\Debug\net9.0\clase4.AssemblyInfo.cs
+C:\xampp\htdocs\TP3\clase4\obj\Debug\net9.0\clase4.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\TP3\clase4\obj\Debug\net9.0\clase4.sourcelink.json
+C:\xampp\htdocs\TP3\clase4\obj\Debug\net9.0\clase4.dll
+C:\xampp\htdocs\TP3\clase4\obj\Debug\net9.0\refint\clase4.dll
+C:\xampp\htdocs\TP3\clase4\obj\Debug\net9.0\clase4.pdb
+C:\xampp\htdocs\TP3\clase4\obj\Debug\net9.0\clase4.genruntimeconfig.cache
+C:\xampp\htdocs\TP3\clase4\obj\Debug\net9.0\ref\clase4.dll

@@ -5,90 +5,70 @@
             "codigo" => 2001,
             "precio" => 15000,
             "cantidad" => 3,
-            "medioPago" => "transferencia",
-            "descuento" => "NO",
-            "total" => 0
+            "medioPago" => "transferencia"
         ),
         1 => array(
             "nombre" => "Teclado Redragon K552",
             "codigo" => 2002,
             "precio" => 22000,
             "cantidad" => 2,
-            "medioPago" => "transferencia",
-            "descuento" => "NO",
-            "total" => 0
+            "medioPago" => "transferencia"
         ),
         2 => array(
             "nombre" => "Monitor Samsung 24\"",
             "codigo" => 2003,
             "precio" => 120000,
             "cantidad" => 1,
-            "medioPago" => "tarjeta",
-            "descuento" => "NO",
-            "total" => 0
+            "medioPago" => "tarjeta"
         ),
         3 => array(
             "nombre" => "Auriculares HyperX Cloud II",
             "codigo" => 2004,
             "precio" => 45000,
-            "cantidad" => 2,
-            "medioPago" => "efectivo",
-            "descuento" => "NO",
-            "total" => 0
+            "cantidad" => 6,
+            "medioPago" => "efectivo"
         ),
         4 => array(
             "nombre" => "Celular Samsung Galaxy A54",
             "codigo" => 2005,
             "precio" => 280000,
             "cantidad" => 1,
-            "medioPago" => "efectivo",
-            "descuento" => "NO",
-            "total" => 0
+            "medioPago" => "efectivo"
         ),
         5 => array(
             "nombre" => "Smart TV LG 43\"",
             "codigo" => 2006,
             "precio" => 350000,
             "cantidad" => 1,
-            "medioPago" => "tarjeta",
-            "descuento" => "NO",
-            "total" => 0
+            "medioPago" => "tarjeta"
         ),
         6 => array(
             "nombre" => "Webcam Logitech C920",
             "codigo" => 2007,
             "precio" => 38000,
-            "cantidad" => 23,
-            "medioPago" => "efectivo",
-            "descuento" => "NO",
-            "total" => 0
+            "cantidad" => 3,
+            "medioPago" => "efectivo"
         ),
         7 => array(
             "nombre" => "Parlante JBL Flip 6",
             "codigo" => 2008,
             "precio" => 60000,
             "cantidad" => 2,
-            "medioPago" => "tarjeta",
-            "descuento" => "NO",
-            "total" => 0
+            "medioPago" => "tarjeta"
         ),
         8 => array(
             "nombre" => "Notebook Lenovo IdeaPad",
             "codigo" => 2009,
             "precio" => 520000,
             "cantidad" => 1,
-            "medioPago" => "transferencia",
-            "descuento" => "NO",
-            "total" => 0
+            "medioPago" => "transferencia"
         ),
         9 => array(
             "nombre" => "Pendrive Kingston 64GB",
             "codigo" => 2010,
             "precio" => 8000,
             "cantidad" => 5,
-            "medioPago" => "efectivo",
-            "descuento" => "NO",
-            "total" => 0
+            "medioPago" => "efectivo"
         )
     );
     $cant = count($Productos); 
@@ -140,17 +120,15 @@
                     <td><?php echo $Productos[$i]["medioPago"]?></td>
                     <td class="table-<?php 
                         
-                        if ($Productos[$i]["descuento"] == "efectivo"){
-                            $color = "success"; 
+                        if ($Productos[$i]["medioPago"] == "efectivo"){
+                            echo $color = "success"; 
                         }else{
-                            $color ="danger";
+                            echo $color ="danger";
                         }
-                    
-                        echo $color 
                     
                     ?> text-center fw-bold">
                         <?php
-                            if ($Productos[$i]["descuento"] == "efectivo"){
+                            if ($Productos[$i]["medioPago"] == "efectivo"){
                                 echo "SI";
                             } else {
                                 echo "NO";
@@ -162,9 +140,9 @@
                         <?php 
                             $total = $Productos[$i]["cantidad"] * $Productos[$i]["precio"];
                             $Productos[$i]["total"] = $total;
-                            $descuento = $total * 0.90;
+                            $descuento = $total * 0.10;
                             if ($Productos[$i]["medioPago"] == "efectivo"){
-                                $total = $total - $descuento
+                                $total = $total - $descuento;
                             }
                             echo $Productos[$i]["total"];
                         ?>
@@ -183,17 +161,18 @@
                         </div>
                         <div class="flex-grow-1 ms-3">
                             <h5 class="card-title text-muted mb-1">Producto más vendido</h5>
-                            <h3 class="fw-bold text-primary mb-0"><?php
-                                $aux = 0;
-                                $vendido = "";
-                                for ($i = 0; $i < $cant; $i++){
-                                    if ($Productos[$i]["cantidad"]>$aux){
-                                        $aux = $Productos[$i]["cantidad"];
-                                        $vendido = $Productos[$i]["nombre"];
-                                    } 
-                                }
-                                echo $vendido; 
-                            ?></h3>
+                            <h3 class="fw-bold text-primary mb-0">
+                                <?php
+                                    $aux = 0; 
+                                    for ($i = 0; $i < $cant; $i++){
+                                        if ($Productos[$i]["cantidad"] > $aux){
+                                            $aux = $Productos[$i]["cantidad"];
+                                            $vendido = $Productos[$i]["nombre"];
+                                        } 
+                                    }
+                                    echo $vendido; 
+                                ?>
+                            </h3>
                         </div>
                     </div>
                     <div class="mt-3">

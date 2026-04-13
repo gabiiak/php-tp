@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Ejercicio de Inclusion de scripts:
+1) separar el archivo principal en estas secciones:
+    a) seccion de encabezado o header
+    b) seccion de menu
+    c) seccion de Categorias
+    d) seccion de Archivos
+    e) seccion pie de pagina
+
+2) Cada archivo separado debe ser un archivo PHP
+3) Cada script debe llamarse con una función que muestre un error Fatal en caso de no encontrarlo.
+4) La template debe visualizarse correctamente como si todo fuera un solo archivo.
+5) Dentro de una carpeta llamada "includes" deberán alojar un script llamado "array.inc.php", el cual contendrá 
+el array con sus elementos definidos, para conformar cada posteo a ser visualizado en la seccion central.
+6) en la seccion central correspondiente deberán recorrer y mostrar los elementos del array de posteos. 
+7) Dentro de la carpeta llamada "includes" deberan alojar un script llamado array_menu.inc.php, el cual contendrá
+un array con los elementos de la sección de Menu 1b) [la sección del menu]. 
+Dentro del script seccionado del menu, deberan recorrerlo y mostrar sus elementos segun la disposición de la maqueta original.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ejercicio 1 - Inclusion de archivos</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="index.php">Home</a></li>
+			<li><a href="blog.php">Blog</a></li>
+			<li><a href="photos.php">Photos</a></li>
+			<li><a href="about.php">About</a></li>
+			<li><a href="links.php">Links</a></li>
+			<li><a href="contact.php">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#">Ejercicio 4   </a></h1>
+			<p> design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></p>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+		<div id="content">
+			<div class="post">
+				<h2 class="title"><a href="#">Titulo articulo 1  </a></h2>
+				<p class="meta"><span class="date">24 Mayo 2021</span><span class="posted">Posted by <a href="#">Admin</a></span></p>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					<p>This is <strong>Green Forest  </strong>, a free, fully standards-compliant CSS template designed by FreeCssTemplates<a href="http://www.nodethirtythree.com/"></a> for <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.  This free template is released under a <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attributions 2.5</a> license, so you’re pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>
+					<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum ipsum. Proin imperdiet est. Phasellus dapibus semper urna. Pellentesque ornare, orci in felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem.</p>
+					<p class="links"><a href="articulo.php?id=1">Leer mas...</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">comentarios (20)</a></p>
+				</div>
+			</div>
+			<div class="post">
+				<h2 class="title"><a href="#">Titulo articulo 2</a></h2>
+				<p class="meta"><span class="date">24 Mayo 2021</span><span class="posted">Posted by <a href="#">Admin</a></span></p>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus <a href="#">dapibus semper urna</a>. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc, ut consectetuer nisl felis ac diam. Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem.  Mauris quam enim, molestie in, rhoncus ut, lobortis a, est.</p>
+					<p class="links"><a href="articulo.php?id=2">Leer mas...</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">comentarios (15)</a></p>
+				</div>
+			</div>
+			<div class="post">
+				<h2 class="title"><a href="#">Titulo articulo 3 </a></h2>
+				<p class="meta"><span class="date">24 Mayo 2021</span><span class="posted">Posted by <a href="#">Admin</a></span></p>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus <a href="#">dapibus semper urna</a>. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc, ut consectetuer nisl felis ac diam. Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem.  Mauris quam enim, molestie in, rhoncus ut, lobortis a, est.</p>
+					<p class="links"><a href="articulo.php?id=3">Leer mas...</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">comentarios (33)</a></p>
+				</div>
+			</div>
+		<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+		<div id="sidebar">
+			<ul>
+				<li>
+					<div id="search" >
+					<form method="get" action="#">
+						<div>
+							<input type="text" name="s" id="search-text" value="" />
+							<input type="submit" id="search-submit" value="GO" />
+						</div>
+					</form>
+					</div>
+					<div style="clear: both;">&nbsp;</div>
+				</li>
+				<li>
+					<h2>Aliquam tempus</h2>
+					<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper consectetuer hendrerit.</p>
+				</li>
+				<li>
+					<h2>Categories</h2>
+					<ul>
+						<li><a href="categorias.php?id=1">Aliquam libero</a></li>
+						<li><a href="categorias.php?id=2">Consectetuer adipiscing elit</a></li>
+						<li><a href="categorias.php?id=3">Metus aliquam pellentesque</a></li>
+						<li><a href="categorias.php?id=4">Suspendisse iaculis mauris</a></li>
+						<li><a href="categorias.php?id=5">Urnanet non molestie semper</a></li>
+						<li><a href="categorias.php?id=6">Proin gravida orci porttitor</a></li>
+					</ul>
+				</li>
+				<li>
+					<h2>Blogroll</h2>
+					<ul>
+						<li><a href="blogroll.php?id=1">Aliquam libero</a></li>
+						<li><a href="blogroll.php?id=2">Consectetuer adipiscing elit</a></li>
+						<li><a href="blogroll.php?id=3">Metus aliquam pellentesque</a></li>
+						<li><a href="blogroll.php?id=4">Suspendisse iaculis mauris</a></li>
+						<li><a href="blogroll.php?id=5">Urnanet non molestie semper</a></li>
+						<li><a href="blogroll.php?id=6">Proin gravida orci porttitor</a></li>
+					</ul>
+				</li>
+				<li>
+					<h2>Archives</h2>
+					<ul>
+						<li><a href="archives.php?id=1">Aliquam libero</a></li>
+						<li><a href="archives.php?id=2">Consectetuer adipiscing elit</a></li>
+						<li><a href="archives.php?id=3">Metus aliquam pellentesque</a></li>
+						<li><a href="archives.php?id=4">Suspendisse iaculis mauris</a></li>
+						<li><a href="archives.php?id=5">Urnanet non molestie semper</a></li>
+						<li><a href="archives.php?id=6">Proin gravida orci porttitor</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+</div>
+	<div id="footer">
+		<p>Copyright (c) 2008 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+	</div>
+	<!-- end #footer -->
+<div style="text-align: center; font-size: 0.75em;">Design downloaded from <a href="http://www.freewebtemplates.com/">free website templates</a>.</div></body>
+</html>
